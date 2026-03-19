@@ -1,0 +1,18 @@
+{
+  "inbounds": [{
+    "port": 443,
+    "protocol": "vless",
+    "settings": {
+      "clients": [{"id": "your-uuid-here"}],
+      "decryption": "none"
+    },
+    "streamSettings": {
+      "network": "ws",
+      "wsSettings": {"path": "/vless"},
+      "security": "none"
+    }
+  }],
+  "outbounds": [{
+    "protocol": "freedom"
+  }]
+}
