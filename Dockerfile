@@ -1,6 +1,7 @@
-FROM node:18-alpine
-WORKDIR /app
-COPY package.json .
-COPY index.js .
-EXPOSE 3000
-CMD ["node", "index.js"]
+FROM teddysun/xray:latest
+
+COPY config.json /etc/xray/config.json
+
+EXPOSE 443
+
+CMD ["xray", "-config", "/etc/xray/config.json"]
